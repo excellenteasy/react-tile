@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- iojs-v1
+sudo: false
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+env:
+  global:
+  - secure: Pij+4fwIrRPJJz0UJ4KnIhwFOZf08G5kIQ+RYAzFV9DXXUxaT8KrUoCzpyQ4VJAvusGhREz15IkZmaOySualSYGRrJ4u3t1dNhyGJE3i4ueM8AvfudGDDSfLsBQQ5g93dVOgZ9q0Mi7C8BjfDRUlrlywPZ8TmJDVVgYfT/UrXjE=
+deploy:
+  provider: npm
+  email: david@excellenteasy.com
+  skip_cleanup: true
+  api_key:
+    secure: P237ya6niwYXlG/Ht1SaFsAmvTQwrCsuhUYyX9BLkV8/8YpUst68kGDEVIz7MIzgQBDs9+xEBsGwPp2uvfynACRLHCClHZGg72ZBeycI7WHKmKLqYLg04ccpgNmnpcPgu7GOdBdFyI+5etL6g1b3GStgwYWXj6hP/S1oFUGlbVs=
+  on:
+    branch: master
+    repo: "excellenteasy/react-tile"
