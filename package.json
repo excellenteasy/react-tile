@@ -1,7 +1,7 @@
 {
-  "name": "ee-react-component",
+  "name": "react-tile",
   "version": "0.0.0-semantically-released",
-  "description": "A simple development process for reuseable react components written in ES6.",
+  "description": "A tile ui component to display text and other media.",
   "main": "index.jsx",
   "config": {
     "lrport": 35729,
@@ -9,11 +9,11 @@
     "host": "0.0.0.0"
   },
   "scripts": {
+    "test": "babel-node test | tap-spec",
     "ify": "browserify -t babelify example/app.jsx",
     "clean": "rm -rf example/build.js",
     "prebuild": "npm run clean",
     "build": "npm run ify -s > example/build.js",
-    "test": "babel-node test | tap-spec",
     "watch": "onchange 'index.jsx' -- npm test",
     "watchify": "watchify -t babelify example/app.jsx -o example/build.js",
     "livereload": "lrhs -d example -b -w index.html,build.js -l $npm_package_config_lrport",
@@ -51,7 +51,7 @@
     "node": "^0.10",
     "npm": "^2"
   },
-  "homepage": "https://github.com/excellenteasy/react-component.git",
+  "homepage": "https://github.com/excellenteasy/react-tile.git",
   "keywords": [
     "react",
     "component",
@@ -62,9 +62,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/excellenteasy/react-component.git"
+    "url": "https://github.com/excellenteasy/react-tile.git"
   },
   "bugs": {
-    "url": "https://github.com/excellenteasy/react-component/issues"
+    "url": "https://github.com/excellenteasy/react-tile/issues"
   }
 }
