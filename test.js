@@ -1,8 +1,9 @@
 'use strict'
+const React = require('react')
 const test = require('tape')
-import {Component} from './'
+import {TextCell} from './'
 
-test('component class', function (t) {
+test('TextCell spec', function (t) {
   t.plan(1)
-  t.ok(Component, 'useless test assertion, but hey, at least tests work ;)')
+  t.ok(false, 'No tests yet :( Sorry, this is my first React component.')
 })
