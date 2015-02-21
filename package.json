@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "babel-node test | tap-spec",
-    "clean": "rm -rf example/build.js",
+    "clean": "rm -rf example/build.js && rm -rf dist && mkdir dist",
     "prebuild": "npm run clean",
     "build": "browserify example/app.jsx > example/build.js",
     "watch": "onchange 'index.jsx' -- npm test",
@@ -18,6 +18,7 @@
     "livereload": "lrhs -d example -b -w index.html,build.js -l $npm_package_config_lrport",
     "open": "opener http://$npm_package_config_host:$npm_package_config_port/index.html",
     "serve": "npm run build && parallelshell 'npm run watch -s' 'npm run watchify -s' 'npm run livereload -s' 'npm run open -s'",
+    "predist": "npm run clean",
     "dist": "babel index.jsx > dist/index.js",
     "prepublish": "npm run dist && semantic-release pre",
     "postpublish": "semantic-release post"
