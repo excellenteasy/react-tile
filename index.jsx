@@ -28,10 +28,10 @@ const squarebox = {
       React.PropTypes.number
     ]),
     color: React.PropTypes.string,
+    lineHeight: React.PropTypes.string,
     background: React.PropTypes.string,
     backgroundSize: React.PropTypes.string,
-    fontMax: React.PropTypes.number,
-    fontMin: React.PropTypes.number,
+    fontSize: React.PropTypes.number,
     fontFamily: React.PropTypes.string
   },
   getDefaultProps() {
