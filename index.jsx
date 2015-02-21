@@ -41,7 +41,8 @@ const squarebox = {
       background: 'black',
       backgroundSize: 'cover',
       fontFamily: 'inherit',
-      fontSize: 10
+      fontSize: 10,
+      lineHeight: '1.5'
     }
   },
   render() {
@@ -54,7 +55,8 @@ const squarebox = {
       paddingBottom: '100%',
       overflow: 'hidden',
       background: this.props.background,
-      backgroundSize: this.props.backgroundSize
+      backgroundSize: this.props.backgroundSize,
+      lineHeight: this.props.lineHeight
     }
 
     let contentStyle = {
