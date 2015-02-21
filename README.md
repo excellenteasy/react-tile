@@ -31,11 +31,14 @@ Most likely you only want to use `Tile` - buy hey, modularity!
 The `Tile` component is very flexible and allows you to manipulate its rendering using these props:
 * [`width`](#width): define the width of the tile
 * `color`: set text color `SquareBox`'s content
+* `lineHeight`: set css lineHeight property for `SquareBox`
 * [`background`](#background): provide the background for `SquareBox`
 * [`backgroundSize`](#backgroundSize): provide the backgroundSize for `SquareBox`
+* `fontSize`: set fontSize of `SquareBox`
+* `fontFamily`: set fontFamily of `SquareBox`
 * [`bar`](#bar): provide content for the bottom bar or disable it
 * [`barBackground`](#barbackground): provides background styles as a string
-* `barColor`: set text color of `TextCell`
+* `barColor`: set text color of `TextCell`,
 
 #### width
 The width of the `Tile` component also defines the length of a side of `SquareBox`. It can be any CSS value as string. Default is `"100%"`.
@@ -63,8 +66,7 @@ Using a imaginary `TimeRelative` component, that formats dates:
 ### SquareBox
 The `SquareBox` component has the same width and height. It supports these props:
 * `size`: Specifies the size of one side; default is `"100%"`
-* [`background`](#background): value for css `background` property or React component to be used as background; see above for details
-* [`backgroundSize`](#backgroundSize): value for css `backgroundSize` property; Default is `"cover"`
+* `color`, `lineHeight`, `background`, `backgroundSize`, `fontSize`, `fontFamily`
 
 ### TextCell
 The `TextCell` component does not wrap text, hides overflowing elements and - if provided a string - will automatically cut off strings that are too long for the width of the tile, using an ellipsis. It supports these props:
