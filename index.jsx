@@ -6,7 +6,7 @@ const tile = {
     let bar
     if (this.props.bar !== false) {
       bar = (
-        <div style={{background: bar}}>
+        <div style={{background: this.props.barBackground, color: this.props.barColor}}>
           <TextCell  {...this.props}>{this.props.bar}</TextCell>
         </div>
       )

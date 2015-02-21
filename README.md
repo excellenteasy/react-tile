@@ -35,6 +35,7 @@ The `Tile` component is very flexible and allows you to manipulate its rendering
 * [`backgroundSize`](#backgroundSize): provide the backgroundSize for `SquareBox`
 * [`bar`](#bar): provide content for the bottom bar or disable it
 * [`barBackground`](#barbackground): provides background styles as a string
+* `barColor`: set text color of `TextCell`
 
 #### width
 The width of the `Tile` component also defines the length of a side of `SquareBox`. It can be any CSS value as string. Default is `"100%"`.
