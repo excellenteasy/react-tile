@@ -19,6 +19,13 @@ React.render(
 )
 ```
 
+Consume using only browserify (no ES6, no JSX):
+
+```javascript
+var React = require('react')
+var Tile = require('react-tile').Tile
+```
+
 ## API
 This module exports three components:
 * [`Tile`](#tile)
