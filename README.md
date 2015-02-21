@@ -30,6 +30,7 @@ Most likely you only want to use `Tile` - buy hey, modularity!
 ### Tile
 The `Tile` component is very flexible and allows you to manipulate its rendering using these props:
 * [`width`](#width): define the width of the tile
+* `color`: set text color `SquareBox`'s content
 * [`background`](#background): provide the background for `SquareBox`
 * [`backgroundSize`](#backgroundSize): provide the backgroundSize for `SquareBox`
 * [`bar`](#bar): provide content for the bottom bar or disable it
