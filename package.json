@@ -1,6 +1,6 @@
 {
   "name": "react-tile",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "A tile ui component to display text and other media.",
   "main": "dist/index.js",
   "config": {
