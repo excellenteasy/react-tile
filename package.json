@@ -2,7 +2,7 @@
   "name": "react-tile",
   "version": "0.0.0-semantically-released",
   "description": "A tile ui component to display text and other media.",
-  "main": "index.jsx",
+  "main": "dist/index.js",
   "config": {
     "lrport": 35729,
     "port": 8080,
@@ -10,16 +10,15 @@
   },
   "scripts": {
     "test": "babel-node test | tap-spec",
-    "ify": "browserify -t babelify example/app.jsx",
     "clean": "rm -rf example/build.js",
     "prebuild": "npm run clean",
-    "build": "npm run ify -s > example/build.js",
+    "build": "browserify example/app.jsx > example/build.js",
     "watch": "onchange 'index.jsx' -- npm test",
-    "watchify": "watchify -t babelify example/app.jsx -o example/build.js",
+    "watchify": "watchify example/app.jsx -o example/build.js",
     "livereload": "lrhs -d example -b -w index.html,build.js -l $npm_package_config_lrport",
     "open": "opener http://$npm_package_config_host:$npm_package_config_port/index.html",
     "serve": "npm run build && parallelshell 'npm run watch -s' 'npm run watchify -s' 'npm run livereload -s' 'npm run open -s'",
-    "prepublish": "semantic-release pre",
+    "prepublish": "browserify index.jsx > dist/index.js && semantic-release pre",
     "postpublish": "semantic-release post"
   },
   "author": "David Pfahler <david@excellenteasy.com>",

@@ -6,6 +6,7 @@ node_modules/
 
 # ignore generated files
 example/build.js
+dist/
 
 # logs
 *.log

@@ -1,6 +1,6 @@
 'use strict'
 const React = require('react')
-import {Tile} from '../'
+import {Tile} from '../index.jsx'
 
 const style = {
   width: '160px',
