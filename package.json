@@ -18,7 +18,8 @@
     "livereload": "lrhs -d example -b -w index.html,build.js -l $npm_package_config_lrport",
     "open": "opener http://$npm_package_config_host:$npm_package_config_port/index.html",
     "serve": "npm run build && parallelshell 'npm run watch -s' 'npm run watchify -s' 'npm run livereload -s' 'npm run open -s'",
-    "prepublish": "browserify index.jsx > dist/index.js && semantic-release pre",
+    "dist": "browserify index.jsx > dist/index.js",
+    "prepublish": "npm run dist && semantic-release pre",
     "postpublish": "semantic-release post"
   },
   "author": "David Pfahler <david@excellenteasy.com>",
