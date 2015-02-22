@@ -29,10 +29,8 @@ const squarebox = {
     ]),
     color: React.PropTypes.string,
     lineHeight: React.PropTypes.string,
-    background: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element
-    ]),
+    bg: React.PropTypes.element,
+    backgroundColor: React.PropTypes.string,
     backgroundSize: React.PropTypes.string,
     fontSize: React.PropTypes.oneOfType([
       React.PropTypes.number,
@@ -45,7 +43,6 @@ const squarebox = {
     return {
       size: '100%',
       color: 'white',
-      background: 'black',
       backgroundSize: 'cover',
       fontFamily: 'inherit',
       fontSize: 10,
@@ -62,6 +59,7 @@ const squarebox = {
       height: 0,
       paddingBottom: '100%',
       overflow: 'hidden',
+      backgroundColor: this.props.backgroundColor,
       backgroundSize: this.props.backgroundSize,
       backgroundImage: this.props.backgroundImage,
       lineHeight: this.props.lineHeight
@@ -69,11 +67,7 @@ const squarebox = {
 
     let children = []
 
-    if (typeof this.props.background === 'string') {
-      style.background = this.props.background
-    }
-    else if (this.props.background) {
-
+    if (this.props.bg) {
       let bgStyle = {
         zIndex: '-1',
         position: 'absolute',
@@ -87,7 +81,7 @@ const squarebox = {
       }
       children.push(
         <div key='background' style={bgStyle}>
-          {this.props.background}
+          {this.props.bg}
         </div>
       )
     }
