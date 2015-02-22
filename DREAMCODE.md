@@ -88,6 +88,7 @@ Using a `TimeRelative` component, that formats dates:
 The `SquareBox` component has the same width and height. It supports these props:
 * `size`: Specifies the size of one side; default is `"100%"`
 * [`background`](#background): value for css `background` property or React component to be used as background; see above for details
+* `backgroundImage`: value for css `background-imag` property
 * [`backgroundSize`](#backgroundSize): value for css `backgroundSize` property; Default is `"cover"`
 * [`autoFontSize` et. al.](#font-props): font related props can be customized; see above for details
 

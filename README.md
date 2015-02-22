@@ -40,6 +40,7 @@ The `Tile` component is very flexible and allows you to manipulate its rendering
 * `color`: set text color `SquareBox`'s content
 * `lineHeight`: set css lineHeight property for `SquareBox`
 * [`background`](#background): provide the background for `SquareBox`
+* `backgroundImage`: set backgroundImage css property for `SquareBox`
 * [`backgroundSize`](#backgroundSize): provide the backgroundSize for `SquareBox`
 * `fontSize`: set fontSize of `SquareBox`
 * `fontFamily`: set fontFamily of `SquareBox`
@@ -74,7 +75,7 @@ Using a imaginary `TimeRelative` component, that formats dates:
 The `SquareBox` component has the same width and height. It supports these props:
 * `size`: Specifies the size of one side; default is `"100%"`
 * [`background`](#background): value for css `background` property or React component to be used as background; see above for details
-* `color`, `lineHeight`, `backgroundSize`, `fontSize`, `fontFamily`
+* `color`, `lineHeight`, `backgroundSize`, `fontSize`, `fontFamily`, `backgroundImage`
 
 ### TextCell
 The `TextCell` component does not wrap text, hides overflowing elements and - if provided a string - will automatically cut off strings that are too long for the width of the tile, using an ellipsis. It supports these props:
