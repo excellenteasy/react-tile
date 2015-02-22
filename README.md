@@ -15,7 +15,7 @@ const React = require('react')
 import {Tile} from 'react-tile'
 
 React.render(
-  <Tile background="url(path/to/img.png)" bar="subtext">Main content</Tile>
+  <Tile backgroundImage="url(path/to/img.png)" bar="subtext">Main content</Tile>
 )
 ```
 
@@ -39,7 +39,7 @@ The `Tile` component is very flexible and allows you to manipulate its rendering
 * [`width`](#width): define the width of the tile
 * `color`: set text color `SquareBox`'s content
 * `lineHeight`: set css lineHeight property for `SquareBox`
-* [`background`](#background): provide the background for `SquareBox`
+* [`bg`](#bg): provide the background for `SquareBox` as React Element
 * `backgroundImage`: set backgroundImage css property for `SquareBox`
 * [`backgroundSize`](#backgroundSize): provide the backgroundSize for `SquareBox`
 * `fontSize`: set fontSize of `SquareBox`
@@ -51,8 +51,8 @@ The `Tile` component is very flexible and allows you to manipulate its rendering
 #### width
 The width of the `Tile` component also defines the length of a side of `SquareBox`. It can be any CSS value as string. Default is `"100%"`.
 
-#### background
-The `background` prop is a string. It will used as value for the css `background` property of `SquareBox`.Default is `"black"`.
+#### bg
+The `bg` prop is a React element which will be used as background for `SquareBox`'s content, if provided.
 
 #### bar
 The `bar` prop can be a string (shorthand) or a React component used as content for `TextCell`.
@@ -74,7 +74,7 @@ Using a imaginary `TimeRelative` component, that formats dates:
 ### SquareBox
 The `SquareBox` component has the same width and height. It supports these props:
 * `size`: Specifies the size of one side; default is `"100%"`
-* [`background`](#background): value for css `background` property or React component to be used as background; see above for details
+* [`bg`](#bg): value for css `bg` property or React component to be used as background; see above for details
 * `color`, `lineHeight`, `backgroundSize`, `fontSize`, `fontFamily`, `backgroundImage`
 
 ### TextCell

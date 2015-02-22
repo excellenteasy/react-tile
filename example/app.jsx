@@ -16,14 +16,13 @@ React.render(
     <Tile
       fontSize="30"
       fontFamily="Avenir"
-      background="red"
+      backgroundColor="red"
       bar="Color red"
       color="black"
     >Tile #1</Tile>
-    <Tile background={`url(${url})`} bar="Background image">Tile #2</Tile>
-    <Tile background="purple" bar={false}>Tile #3</Tile>
-    <Tile background={bgImg} lineHeight="1.1" bar={<b>fooo</b>}>Tile #4</Tile>
-    <Tile backgroundImage={url} bar="Background image">Tile #5</Tile>
+    <Tile backgroundImage={`url(${url})`} bar="Background image">Tile #2</Tile>
+    <Tile backgroundColor="purple" bar={false}>Tile #3</Tile>
+    <Tile bg={bgImg} lineHeight="1.1" bar={<b>fooo</b>}>Tile #4</Tile>
   </div>,
   document.body
 )
