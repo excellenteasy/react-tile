@@ -38,7 +38,8 @@ const squarebox = {
       React.PropTypes.number,
       React.PropTypes.string
     ]),
-    fontFamily: React.PropTypes.string
+    fontFamily: React.PropTypes.string,
+    backgroundImage: React.PropTypes.string
   },
   getDefaultProps() {
     return {
@@ -62,6 +63,7 @@ const squarebox = {
       paddingBottom: '100%',
       overflow: 'hidden',
       backgroundSize: this.props.backgroundSize,
+      backgroundImage: this.props.backgroundImage,
       lineHeight: this.props.lineHeight
     }
 
