@@ -29,9 +29,15 @@ const squarebox = {
     ]),
     color: React.PropTypes.string,
     lineHeight: React.PropTypes.string,
-    background: React.PropTypes.string,
+    background: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element
+    ]),
     backgroundSize: React.PropTypes.string,
-    fontSize: React.PropTypes.number,
+    fontSize: React.PropTypes.oneOfType([
+      React.PropTypes.number,
+      React.PropTypes.string
+    ]),
     fontFamily: React.PropTypes.string
   },
   getDefaultProps() {
@@ -47,6 +53,7 @@ const squarebox = {
   },
   render() {
     let style = {
+      position: 'relative',
       color: this.props.color,
       width: this.props.size,
       fontSize: `${this.props.fontSize}px`,
@@ -54,9 +61,33 @@ const squarebox = {
       height: 0,
       paddingBottom: '100%',
       overflow: 'hidden',
-      background: this.props.background,
       backgroundSize: this.props.backgroundSize,
       lineHeight: this.props.lineHeight
+    }
+
+    let children = []
+
+    if (typeof this.props.background === 'string') {
+      style.background = this.props.background
+    }
+    else if (this.props.background) {
+
+      let bgStyle = {
+        zIndex: '-1',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden'
+      }
+      children.push(
+        <div key='background' style={bgStyle}>
+          {this.props.background}
+        </div>
+      )
     }
 
     let contentStyle = {
@@ -65,11 +96,13 @@ const squarebox = {
       width: '100%'
     }
 
+    children.push(
+      <div key="content" style={contentStyle}>{this.props.children}</div>
+    )
+
     return (
       <div style={style}>
-        <div style={contentStyle}>
-          {this.props.children}
-        </div>
+        {children}
       </div>
     )
   }
