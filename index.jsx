@@ -59,32 +59,30 @@ const squarebox = {
       height: 0,
       paddingBottom: '100%',
       overflow: 'hidden',
-      backgroundColor: this.props.backgroundColor,
-      backgroundSize: this.props.backgroundSize,
-      backgroundImage: this.props.backgroundImage,
       lineHeight: this.props.lineHeight
     }
 
     let children = []
-
-    if (this.props.bg) {
-      let bgStyle = {
-        zIndex: '-1',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        width: '100%',
-        height: '100%',
-        overflow: 'hidden'
-      }
-      children.push(
-        <div key='background' style={bgStyle}>
-          {this.props.bg}
-        </div>
-      )
+    let bgStyle = {
+      zIndex: '-1',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      backgroundColor: this.props.backgroundColor,
+      backgroundSize: this.props.backgroundSize,
+      backgroundImage: this.props.backgroundImage
     }
+
+    children.push(
+      <div key='background' style={bgStyle}>
+        {this.props.bg || ''}
+      </div>
+    )
 
     let contentStyle = {
       padding: '10px',
@@ -93,7 +91,9 @@ const squarebox = {
     }
 
     children.push(
-      <div key="content" style={contentStyle}>{this.props.children}</div>
+      <div key="content" style={contentStyle}>
+        {this.props.children}
+      </div>
     )
 
     return (
