@@ -9,6 +9,8 @@ const style = {
 
 let url = "https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&fm=jpg&w=1080&fit=max&s=26b16cdf05f4b6a3ad6b5def1d408612"
 
+let bgImg = <img src={url} />
+
 React.render(
   <div style={style}>
     <Tile
@@ -20,7 +22,7 @@ React.render(
     >Tile #1</Tile>
     <Tile background={`url(${url})`} bar="Background image">Tile #2</Tile>
     <Tile background="purple" bar={false}>Tile #3</Tile>
-    <Tile bar={<b>fooo</b>}>Tile #4</Tile>
+    <Tile background={bgImg} lineHeight='1.1' bar={<b>fooo</b>}>Tile #4</Tile>
   </div>,
   document.body
 )

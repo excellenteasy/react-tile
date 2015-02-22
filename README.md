@@ -73,7 +73,8 @@ Using a imaginary `TimeRelative` component, that formats dates:
 ### SquareBox
 The `SquareBox` component has the same width and height. It supports these props:
 * `size`: Specifies the size of one side; default is `"100%"`
-* `color`, `lineHeight`, `background`, `backgroundSize`, `fontSize`, `fontFamily`
+* [`background`](#background): value for css `background` property or React component to be used as background; see above for details
+* `color`, `lineHeight`, `backgroundSize`, `fontSize`, `fontFamily`
 
 ### TextCell
 The `TextCell` component does not wrap text, hides overflowing elements and - if provided a string - will automatically cut off strings that are too long for the width of the tile, using an ellipsis. It supports these props:
